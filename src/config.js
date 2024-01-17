@@ -60,4 +60,4 @@ export const defaultLang = allLangs[0]; // English
 
 // DEFAULT ROOT PATH
 export const DEFAULT_PATH = PATH_DASHBOARD.general.app; // as '/app'
-export const DEFAULT_PATH_PAGES = PATH_DASHBOARD.general.chat; // as '/app'
+export const DEFAULT_PATH_PAGES = PATH_DASHBOARD.general.chat; // as '/chat'

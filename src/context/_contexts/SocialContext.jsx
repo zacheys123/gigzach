@@ -1,13 +1,16 @@
 import React, { useContext, useReducer } from 'react'
-import { SocialContext } from '../config'
-const SocialContextProvider = ({children}) => {
+import { SocialProvider } from '../config'
+import {social,social_state} from '../reducers/social_reducer'
 
-    const [social,setSocial]=useReducer(socialreducer,social_state,false)
-    const value= {social,setSocial}
+
+const SocialContext = ({children}) => {
+
+    const [state,dispatch]=useReducer(social,social_state)
+    let value= {state,dispatch}
   return (
-    <SocialContext.Provider value={value}>
+    <SocialProvider.Provider value={value}>
       {children}
-    </SocialContext.Provider>
+    </SocialProvider.Provider>
   )
 }
 
@@ -15,7 +18,7 @@ export default SocialContext
 
 
 export const useSocialContext=()=>{
-    const context=useContext(SocialContext)
+    const context=useContext(SocialProvider)
     if(!context){
         throw new Error('useSocialContext must be used within SocialContextProvider')
     }

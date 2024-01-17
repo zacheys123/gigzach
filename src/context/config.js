@@ -1,7 +1,7 @@
 import {createContext} from 'react'
 
- const SocialContext=createContext({})
- const ChatContext=createContext({})
- const AuthContext=createContext({})
+ const SocialProvider=createContext({})
+ const ChatProvider=createContext({})
+ const AuthProvider=createContext({})
 
- export {ChatContext,AuthContext,SocialContext}
+ export {ChatProvider,AuthProvider,SocialProvider}
