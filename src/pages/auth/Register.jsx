@@ -16,7 +16,6 @@ const Register = () => {
     email: "",
     password: "",
     confirmpass: "",
-    tel:''
   });
   return (
     <FormContainer>
@@ -31,8 +30,8 @@ const Register = () => {
             type="text"
             name="Firstname"
             value={form_data.Firstname}
-            onChange={(ev) => {
-              setData({ ...form_data, Firstname: ev.target.value });
+            onChange={(ev) => {https://vscode.dev/github/zacheys123/gigzach/blob/main/src/pages/auth/Register.jsx#L34
+              setData({ ..https://vscode.dev/github/zacheys123/gigzach/blob/main/src/pages/auth/Register.jsx#L34.form_data, Firstname: ev.target.value });
             }}
           />
 
