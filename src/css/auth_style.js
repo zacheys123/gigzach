@@ -11,6 +11,11 @@ export const FormContainer = styled.div`
   .auth__left{
     flex:.4;
     background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:column;
+
   }
   .auth__right{
     flex:.8;

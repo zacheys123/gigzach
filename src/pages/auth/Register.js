@@ -25,17 +25,21 @@ const Register = () => {
   });
   return (
     <FormContainer>
+      
        <div className="logo"><h6>Welcome to GigMe</h6></div>
       <Box sx={{background:'white',width:'60%',height:'80%',opacity:.8,display:'flex',}}>
      
         <Box className="auth__left">
+        <Box>
         <h4>GigMe App</h4>
         <Typography variant='subtitle2'>For an amazing experience to be able to connect with fellow musicians and also earn a living
   
         </Typography>
   <h5>Connect with friends and get access to latest gigs and projects provided by you and controlled by you</h5>
-        <Button variant="contained">Sign in</Button>
-        <Button variant="contained">Sign Up</Button>
+       </Box>
+       <Box><Box  sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"red",color:'white',margin:'1rem',borderRadius:'88px'}} variant="contained">Sign in</Box>
+        <Box sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"blue",color:'white',margin:'1rem',borderRadius:'88px'}}  variant="contained">Sign Up</Box>
+       </Box>
         </Box>
         <Box className="auth__right">
           {" "}
