@@ -26,7 +26,7 @@ const Register = () => {
   return (
     <FormContainer>
        <div className="logo"><h6>Welcome to GigMe</h6></div>
-      <Box sx={{background:'white',width:'50%',height:'60%',opacity:.8,display:'flex',}}>
+      <Box sx={{background:'white',width:'60%',height:'80%',opacity:.8,display:'flex',}}>
      
         <Box className="auth__left">
         <h4>GigMe App</h4>
