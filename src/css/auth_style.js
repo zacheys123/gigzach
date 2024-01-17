@@ -9,10 +9,12 @@ export const FormContainer = styled.div`
   background:navy-blue;
   
   .auth__left{
-    flex:.4;
+    flex:.2;
+    background:black;
   }
   .auth__right{
-    flex:.4;
+    flex:.8;
+    background:green;
   }
   .form{
     width: 100%;
