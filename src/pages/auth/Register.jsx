@@ -16,7 +16,12 @@ const Register = () => {
     email: "",
     password: "",
     confirmpass: "",
-    tel:''
+    tel:'',
+    day:'',
+    month:'',
+    year:'',
+    city:'',
+    country:'',
   });
   return (
     <FormContainer>
