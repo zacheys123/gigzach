@@ -2,9 +2,9 @@ import React, { useContext, useReducer } from 'react';
 import { AuthProvider } from '../config';
 import { auth, auth_state } from '../reducers/auth_reducer';
 const AuthContext = ({ children }) => {
-	const [auth_state, setAuth] = useReducer(auth, auth_state);
+	const [authstate, setAuth] = useReducer(auth, auth_state);
 
-	let value = { auth_state, setAuth };
+	let value = { authstate, setAuth };
 	return (
 		<AuthProvider.Provider value={value}>
 			{children}
