@@ -25,7 +25,7 @@ const Register = () => {
   });
   return (
     <FormContainer>
-      <Box sx={{background:'white',width:'80%',height:'80%',opacity:.8}}>
+      <Box sx={{background:'white',width:'80%',height:'80%',opacity:.8,display:'flex',}}>
         <Box className="auth__left">
           <div className="logo"></div>
         </Box>

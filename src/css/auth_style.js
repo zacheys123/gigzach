@@ -10,7 +10,7 @@ export const FormContainer = styled.div`
   
   .auth__left{
     flex:.2;
-    background:black;
+    background:white;
   }
   .auth__right{
     flex:.8;

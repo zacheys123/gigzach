@@ -1,5 +1,4 @@
-import { THEME } from "../../actions"
-import  {auth_state} from './auth_state'
+import { THEME } from "../actions"
 export const auth_state={
     theme:false,
 }

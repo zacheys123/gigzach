@@ -4,9 +4,9 @@ const Login = () => {
 
 
   return (
-    <FormContainer>
+    <div>
       Login
-    </FormContainer>
+    </div>
   );
 };
 
