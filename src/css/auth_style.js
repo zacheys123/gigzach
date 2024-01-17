@@ -9,7 +9,7 @@ export const FormContainer = styled.div`
   background:navy-blue;
   
   .auth__left{
-    flex:.2;
+    flex:.4;
     background:white;
   }
   .auth__right{

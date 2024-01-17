@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FormContainer } from "../../css/auth_style";
 import { Link } from "react-router-dom";
 import { PATH_DASHBOARD } from "../../routes/paths";
-import { Button, Box, Container } from "@mui/material";
+import { Button, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 const Register = () => {
   const handleSubmit = (ev) => {
@@ -25,9 +25,17 @@ const Register = () => {
   });
   return (
     <FormContainer>
-      <Box sx={{background:'white',width:'80%',height:'80%',opacity:.8,display:'flex',}}>
+       <div className="logo"><h6>Welcome to GigMe</h6></div>
+      <Box sx={{background:'white',width:'50%',height:'60%',opacity:.8,display:'flex',}}>
+     
         <Box className="auth__left">
-          <div className="logo"></div>
+        <h4>GigMe App</h4>
+        <Typography variant='subtitle2'>For an amazing experience to be able to connect with fellow musicians and also earn a living
+  
+        </Typography>
+  <h5>Connect with friends and get access to latest gigs and projects provided by you and controlled by you</h5>
+        <Button variant="contained">Sign in</Button>
+        <Button variant="contained">Sign Up</Button>
         </Box>
         <Box className="auth__right">
           {" "}
