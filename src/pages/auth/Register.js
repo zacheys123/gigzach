@@ -100,7 +100,7 @@ const Register = () => {
             }}
             placeholder="Username"
           />
-          <div style={{textAlign:'right'}}>
+          <div style={{textAlign:'right',margin:'.8rem auto'}}>
             <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
             </div>
             </motion.div>
