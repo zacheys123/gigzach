@@ -54,7 +54,7 @@ h5{
   font-weight:bold; 
   font-family:sans;
  color:red;
-}
+   }
 }
 .form-container{
   width: 100%;
@@ -62,26 +62,31 @@ h5{
   display:flex;
   justify-content:center;
   align-items:center;
-}  form{
+
+} 
+ form{
   background:inherit;
     width:70%;
-    height:70%;
+    height:50%;
     box-shadow:0px 0px 4px #444;
     padding:.7rem;
-    input[type="text"]{
-      margin:.9rem auto;
-      width:100%;
-      padding:.8rem;
-      border:none;
-      outline:none;
-      background:transparent;
-      border-bottom:1px solid white;
-      transition:all .7s ease-out;
-      color:white;
-      &:focus-visible{
-        borde-color:greenyellow;
-      }
-
+    
+    div{
+      input[type="text"]{
+        margin:.9rem auto;
+        width:80%;
+        padding:.8rem;
+        border:none;
+        outline:none;
+        background:transparent;
+        border-bottom:1px solid white;
+        transition:all 1s ease-in-out;
+        color:white;
+  
+        &:focus-visible{
+          border-color:greenyellow;
+        }
+    }
       h5{
         color:white;
         font-family:monospace;

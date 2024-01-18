@@ -77,7 +77,7 @@ const Register = () => {
             onChange={(ev) => {
               setData({ ...form_data, firstname: ev.target.value });
             }}
-            placeholder="Enter Second Name"
+            placeholder="Enter Firstname"
           />
 
           <input
@@ -87,7 +87,8 @@ const Register = () => {
             onChange={(ev) => {
               setData({ ...form_data, second: ev.target.value });
             }}
-            placeholder="Enter Firstname"
+            placeholder="Enter Second Name"
+       
           />
 
           <input
@@ -99,25 +100,13 @@ const Register = () => {
             }}
             placeholder="Username"
           />
-            <Button variant="contained">Next</Button>
+          d<div>
+            <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
+            </div>
             </motion.div>
     
-
-          <input
-            type="text"
-            name="Email"
-            value={form_data.email}
-            onChange={(ev) => {
-              setData({ ...form_data, Email: ev.target.value });
-            }}
-            placeholder="Email"
-          />
-        
-          <span>
-            already have an account,
-            <Link to={PATH_DASHBOARD.general.login}></Link>
-          </span>
-        </form> </Box>
+        </form> 
+        </Box>
 }
         </Box>
           
