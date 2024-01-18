@@ -5,8 +5,16 @@ import { PATH_DASHBOARD } from "../../routes/paths";
 import { Button, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import logo from '../../assets/auth2.gif'
-import logo2 from '../../assets/settings1.gif'
+import logo2 from '../../assets/lock.gif'
+import {SHOWFORM} from '../../context/actions'
+import { SettingsBackupRestoreSharp } from "@mui/icons-material";
+import {useAuthContext} from '../../context/_contexts/AuthContext'
 const Register = () => {
+
+  const{
+    authstate:{registerform},
+    setAuth
+  }=useAuthContext()
   const handleSubmit = (ev) => {
     ev.preventDefault();
     alert("form submitted");
@@ -34,28 +42,42 @@ const Register = () => {
         <Box className="auth__left">
         <Box>
         <h4>GigMe App</h4>
-        <Typography variant='subtitle2' className="typo">For an amazing experience to be able to connect with fellow musicians and also earn a living
+        <Typography variant='subtitle2' className="typo">For an <span style={{fontFamily:'georgia',color:'purple',fontWeight:'bold'}}>AMAZING</span> experience to be able to <span style={{fontFamily:'monospace',fontWeight:'bold',color:'red'}}>Connect</span>  with fellow <span style={{fontFamily:'monospace',fontWeight:'bold',color:'green'}}>Musicians</span>  and also earn a living
         </Typography>
-  <h5>Connect with friends and get access to latest gigs and projects provided by you and controlled by you</h5>
+  <h5><span style={{fontFamily:'monospace',fontWeight:'bold',color:'red'}}>Connect</span> with friends and get access to <span style={{fontFamily:'monospace',fontWeight:'bold',color:'blue',}}>Latest</span>  gigs and projects <span style={{fontFamily:'monospace',fontWeight:'bold',color:'brown'}}>Provided</span>  by you and <span style={{fontFamily:'monospace',fontWeight:'bolder',color:'green'}}>Connect</span>  by you</h5>
        </Box>
-       <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',flexDirection:'column'}}><Box  sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"red",color:'white',margin:'1rem',borderRadius:'88px'}} variant="contained">Sign in</Box>
-        <Box sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"blue",color:'white',margin:'1rem',borderRadius:'88px'}}  variant="contained">Sign Up</Box>
-       </Box>
+  
         </Box>
         <Box className="auth__right">
           {" "}
+          {!registerform ?
          <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',height:'100%'}}>
-          <img src={logo} className="img"/>
-          <img src={logo2} className="img1"/>
+          <Box>            
+            <img src={logo} className="img"/>
+            <img src={logo2} className="img1"/>
+            </Box>
+          
+            <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',flexDirection:'column'}}>
+              <Box className="button"  sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"red",color:'white',margin:'1rem',borderRadius:'88px'}} variant="contained"
+             >Sign in</Box>
+        <Box className="button" sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"blue",color:'white',margin:'1rem',borderRadius:'88px'}}  variant="contained"  
+        onClick={()=>setAuth({type:SHOWFORM})}>Sign Up</Box>
+       </Box>
+         
           </Box>
-          {/* <form action="" onSubmit={handleSubmit}>
-          <input
+      :
+      <Box className="form-container">
+          <form action="" onSubmit={handleSubmit}>
+            <motion.div>
+<h5 style={{color:'white',fontFamily:'monospace'}}>Personal info</h5>
+<input
             type="text"
             name="Firstname"
-            value={form_data.Firstname}
+            value={form_data.firstname}
             onChange={(ev) => {
-              setData({ ...form_data, Firstname: ev.target.value });
+              setData({ ...form_data, firstname: ev.target.value });
             }}
+            placeholder="Enter Second Name"
           />
 
           <input
@@ -65,32 +87,40 @@ const Register = () => {
             onChange={(ev) => {
               setData({ ...form_data, second: ev.target.value });
             }}
+            placeholder="Enter Firstname"
           />
 
           <input
             type="text"
             name="Username"
-            value={form_data.Username}
+            value={form_data.username}
             onChange={(ev) => {
               setData({ ...form_data, Username: ev.target.value });
             }}
+            placeholder="Username"
           />
+            <Button variant="contained">Next</Button>
+            </motion.div>
+    
 
           <input
             type="text"
             name="Email"
-            value={form_data.Email}
+            value={form_data.email}
             onChange={(ev) => {
               setData({ ...form_data, Email: ev.target.value });
             }}
+            placeholder="Email"
           />
-          <button type="submit">Register</button>
+        
           <span>
             already have an account,
             <Link to={PATH_DASHBOARD.general.login}></Link>
           </span>
-        </form> */}
+        </form> </Box>
+}
         </Box>
+          
       </Box>
     </FormContainer>
   );

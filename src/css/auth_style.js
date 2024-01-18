@@ -18,6 +18,8 @@ export const FormContainer = styled.div`
     flex-direction:column;
     h4{
       text-align:center;
+      font-size:20px;
+      font-family:georgia;
     }
     .typo{
       font-family:monospace;
@@ -28,7 +30,8 @@ export const FormContainer = styled.div`
 h5{
   font-family:'soffia' serif;
   font-size:1rem;
-  padding:.7rem;
+  padding:.9rem;
+  font-family:monospace;
 }
   }
   .auth__right{
@@ -43,8 +46,47 @@ h5{
   width:100px;
   z-index:999;
 }
-  .form{
-    width: 100%;
-    height: 100%;
-  }
+.button{
+  cursor:pointer;
+  transition:all .5s ease-in-out;
+  &:hover{
+  background:greenyellow;
+  font-weight:bold; 
+  font-family:sans;
+ color:red;
+}
+}
+.form-container{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}  form{
+  background:inherit;
+    width:70%;
+    height:70%;
+    box-shadow:0px 0px 4px #444;
+    padding:.7rem;
+    input[type="text"]{
+      margin:.9rem auto;
+      width:100%;
+      padding:.8rem;
+      border:none;
+      outline:none;
+      background:transparent;
+      border-bottom:1px solid white;
+      transition:all .7s ease-out;
+      color:white;
+      &:focus-visible{
+        borde-color:greenyellow;
+      }
+
+      h5{
+        color:white;
+        font-family:monospace;
+      }
+    }
+ }
+ }
 `

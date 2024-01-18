@@ -1,12 +1,12 @@
-import { THEME } from "../actions"
+import { SHOWFORM, THEME } from "../actions"
 export const auth_state={
-    theme:false,
+    registerform:false,
 }
 
 export const auth=(action,state={auth_state})=>{
     switch(action.type){
-        case THEME:
-            return {...state,theme:!action.payload}
+        case SHOWFORM:
+            return {...state,registerform:true}
         default:
             return state
     }
