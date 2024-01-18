@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { PATH_DASHBOARD } from "../../routes/paths";
 import { Button, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import logo from '../../assets/auth2.gif'
+import logo2 from '../../assets/settings1.gif'
 const Register = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -32,18 +34,20 @@ const Register = () => {
         <Box className="auth__left">
         <Box>
         <h4>GigMe App</h4>
-        <Typography variant='subtitle2'>For an amazing experience to be able to connect with fellow musicians and also earn a living
-  
+        <Typography variant='subtitle2' className="typo">For an amazing experience to be able to connect with fellow musicians and also earn a living
         </Typography>
   <h5>Connect with friends and get access to latest gigs and projects provided by you and controlled by you</h5>
        </Box>
-       <Box><Box  sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"red",color:'white',margin:'1rem',borderRadius:'88px'}} variant="contained">Sign in</Box>
+       <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',flexDirection:'column'}}><Box  sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"red",color:'white',margin:'1rem',borderRadius:'88px'}} variant="contained">Sign in</Box>
         <Box sx={{width:"80%",padding:'.8rem',textAlign:'center',background:"blue",color:'white',margin:'1rem',borderRadius:'88px'}}  variant="contained">Sign Up</Box>
        </Box>
         </Box>
         <Box className="auth__right">
           {" "}
-         
+         <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',height:'100%'}}>
+          <img src={logo} className="img"/>
+          <img src={logo2} className="img1"/>
+          </Box>
           {/* <form action="" onSubmit={handleSubmit}>
           <input
             type="text"
