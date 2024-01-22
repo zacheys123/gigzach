@@ -72,7 +72,7 @@ h5{
     padding:.7rem;
     
     div{
-      input[type="text"]{
+      input[type="text"],input[type="password"]{
         margin:.9rem auto;
         width:80%;
         padding:.8rem;

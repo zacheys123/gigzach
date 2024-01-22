@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { PATH_DASHBOARD } from "../../routes/paths";
 import { Button, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import {SHOWFORM} from '../../context/actions'
 import { SettingsBackupRestoreSharp } from "@mui/icons-material";
 import {useAuthContext} from '../../context/_contexts/AuthContext'
@@ -15,12 +16,14 @@ const Register = () => {
     setAuth
   }=useAuthContext()
 
-  console.log(Array(10).fill(0,10))
-  const[f_page,setF]=useState(false)
+  const[f_page,setF]=useState(true)
   const[s_page,setS]=useState(false)
-  const[t_page,setT]=useState(true)
+  const[t_page,setT]=useState(false)
   const[q_page,setQ]=useState(false)
+  const[pass,setPass]=useState(false)
+  const[cpass,setCPass]=useState(false)
   const handleSubmit = (ev) => {
+    
     ev.preventDefault();
     alert("form submitted");
   };
@@ -84,7 +87,10 @@ const Register = () => {
     />
 
 <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
+      setS(true);
+      setT(false);
+      setQ(false)}}>Next</Button>
       </div>
     </>
 
@@ -127,7 +133,10 @@ const Register = () => {
   
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
+      setS(false);
+      setT(true);
+      setQ(false)}}>Next</Button>
       </div>
       </motion.div>
 }
@@ -164,12 +173,15 @@ myArray.map((_month, idx) =>
       name="year"
       value={form_data.year}
      onChange={handleInput}
-      placeholder="Enter las two digits of the year"
+      placeholder="Enter last two digits of the year"
    
     />
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
+      setS(false);
+      setT(false);
+      setQ(true)}}>Next</Button>
       </div>
 
 </motion.div>
@@ -177,30 +189,29 @@ myArray.map((_month, idx) =>
 {/* load the fourth page */}
 {q_page &&
 <motion.div>
-<input
-      type="text"
-      name="second"
-      value={form_data.second}
+  <div  style={{display:'flex',alignItems:'center'}}><input
+      type={pass ? "text" :"password"} 
+            name="password"
+      value={form_data.pass}
      onChange={handleInput}
-      placeholder="Enter Second Name"
+      placeholder="Enter password"
    
     />
+    {pass ? <VisibilityOffIcon sx={{color:'white',cursor:'pointer'}} onClick={()=>setPass(false)}/> : <VisibilityIcon sx={{color:'white',cursor:'pointer'}} onClick={()=>setPass(true)}/> 
+   }
+    </div>
 
+<div style={{display:'flex',alignItems:'center'}}>
     <input
-      type="text"
-      name="username"
-      value={form_data.username}
+  type={cpass ? "text" :"password"} 
+      name="confirmpass"
+      value={form_data.confirmpass}
       onChange={handleInput}
-      placeholder="Username"
+      placeholder="Confirm Password"
     />
-        <input
-      type="text"
-      name="email"
-      value={form_data.email}
-      onChange={handleInput}
-      placeholder="Email Address"
-    />
-  
+{cpass ? <VisibilityOffIcon sx={{color:'white',cursor:'pointer'}} onClick={()=>setCPass(false)}/>:
+<VisibilityIcon sx={{color:'white',cursor:'pointer'}} onClick={()=>setCPass(true)}/>}
+  </div>
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
       <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
