@@ -4,7 +4,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 import Main_App from '../layouts/social';
 // // config
-import Auth from '../layouts/auth';
+import Auth from '../layouts/auth/Auth';
 import Chat from '../layouts/chat';
 // // config
 import { DEFAULT_PATH, DEFAULT_PATH_PAGES } from '../config';

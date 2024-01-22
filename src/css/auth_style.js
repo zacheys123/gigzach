@@ -67,7 +67,7 @@ h5{
  form{
   background:inherit;
     width:70%;
-    height:50%;
+    height:65%;
     box-shadow:0px 0px 4px #444;
     padding:.7rem;
     

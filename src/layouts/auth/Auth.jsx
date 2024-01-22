@@ -8,7 +8,7 @@ import logo from '../../assets/auth2.gif'
 import logo2 from '../../assets/lock.gif'
 import { SHOWFORM, SHOWLOGIN } from '../../context/actions';
 
-const index = () => {
+const Auth = () => {
 	const{
 		authstate:{auth__route},
 		setAuth
@@ -68,4 +68,4 @@ const index = () => {
 	);
 };
 
-export default index;
+export default Auth;
