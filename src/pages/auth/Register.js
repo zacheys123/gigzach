@@ -104,7 +104,7 @@ const Register = () => {
       name="firstname"
       value={form_data.firstname}
       onChange={handleInput}
-      placeholder="Enter Firstname"
+      placeholder="Enter Address(optional)"
     />
 
     <input
@@ -112,11 +112,12 @@ const Register = () => {
       name="second"
       value={form_data.tel}
      onChange={handleInput}
-      placeholder="Tel No...."
+      placeholder="Tel No....(optional)"
    
     />
 
     <input
+    required
       type="text"
       name="city"
       value={form_data.country}
@@ -124,6 +125,7 @@ const Register = () => {
       placeholder="Country"
     />
         <input
+        required
       type="text"
       name="email"
       value={form_data.city}
