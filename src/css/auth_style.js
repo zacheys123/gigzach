@@ -89,8 +89,8 @@ h5{
     }
     select{
       padding:.5rem;
-      fojnt-family:sans-serif;
-      margin-bottom:.4rem;
+      font-family:sans-serif;
+  
     }
       h5{
         color:white;
