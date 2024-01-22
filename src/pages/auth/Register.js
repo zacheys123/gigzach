@@ -42,7 +42,7 @@ const Register = () => {
   const handleInput=(ev)=>{
     setData({...form_data,[ev.target.name]:ev.target.value})
   }
-  constmyArray=["January","February","March","April","May","June","July","August","September","October","November","December"]
+  const myArray=["January","February","March","April","May","June","July","August","September","October","November","December"]
  return (
     <Box className="form-container">
     <form action="" onSubmit={handleSubmit}>
@@ -134,37 +134,39 @@ const Register = () => {
 {/* load the third page */}
 {t_page &&
 <motion.div>
-<input
-      type="text"
-      name="second"
-      value={form_data.second}
-     onChange={handleInput}
-      placeholder="Enter Second Name"
-   
-    />
-    <select name='day' value={form_data.day} onChange={handleInput}>
+
+  <div>
+    <h6 style={{color:'white'}}>Date of Birth:</h6>
+    <select name='day' value={form_data.day} onChange={handleInput} placeholder="gvfgfrgbv">
       {
 Array(31).fill().map((_, idx) => 
   <option value={idx + 1}  key={idx}>{idx + 1}</option>
 )
       }
     </select>
+  </div>
 
-    <select name='day' value={form_data.day} onChange={handleInput}>
+  <div>
+    <h6 style={{color:'white'}}>Month:</h6>
+    <select name='month' value={form_data.month} onChange={handleInput}>
       {
 myArray.map((_month, idx) => 
-  <option value={form_data.month}  key={idx}>{_month}</option>
+  <option value={_month}  key={idx}>{_month}</option>
 )
       }
     </select>
-        <input
+
+
+    </div>
+
+    <input
       type="text"
-      name="email"
-      value={form_data.email}
-      onChange={handleInput}
-      placeholder="Email Address"
+      name="year"
+      value={form_data.year}
+     onChange={handleInput}
+      placeholder="Enter las two digits of the year"
+   
     />
-  
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
       <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>

@@ -87,6 +87,11 @@ h5{
           border-color:greenyellow;
         }
     }
+    select{
+      padding:.9rem;
+      fojnt-family:sans-serif;
+      margin-bottom:.9rem;
+    }
       h5{
         color:white;
         font-family:monospace;
