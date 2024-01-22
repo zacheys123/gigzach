@@ -88,7 +88,7 @@ h5{
         }
     }
     select{
-      padding:.5rem;
+      padding:.3rem;
       font-family:sans-serif;
   
     }

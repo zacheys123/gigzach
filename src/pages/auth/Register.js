@@ -135,8 +135,8 @@ const Register = () => {
 {t_page &&
 <motion.div>
 
-  <div>
-    <h6 style={{color:'white'}}>Date of Birth:</h6>
+  <div style={{}}>
+    <h6 style={{color:'white',marginBottom:'-.07rem'}}>Date of Birth:</h6>
     <select name='day' value={form_data.day} onChange={handleInput} placeholder="gvfgfrgbv">
       {
 Array(31).fill().map((_, idx) => 
@@ -146,8 +146,8 @@ Array(31).fill().map((_, idx) =>
     </select>
   </div>
 
-  <div>
-    <h6 style={{color:'white'}}>Month:</h6>
+  <div style={{}}>
+    <h6 style={{color:'white',marginBottom:'-.07rem'}}>Month:</h6>
     <select name='month' value={form_data.month} onChange={handleInput}>
       {
 myArray.map((_month, idx) => 
