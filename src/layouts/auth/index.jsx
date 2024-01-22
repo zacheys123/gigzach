@@ -1,14 +1,16 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React, { useCallback } from 'react';
 import { FormContainer } from "../../css/auth_style";
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/_contexts/AuthContext';
 import { PATH_DASHBOARD } from '../../routes/paths';
-
+import logo from '../../assets/auth2.gif'
+import logo2 from '../../assets/lock.gif'
+import { SHOWFORM, SHOWLOGIN } from '../../context/actions';
 
 const index = () => {
 	const{
-		authstate:{registerform,loginform},
+		authstate:{auth__route},
 		setAuth
 	  }=useAuthContext()
 	const nav=useNavigate()
@@ -38,7 +40,7 @@ const index = () => {
 	   </Box>
 	   <Box className="auth__right">
 		 {" "}
-		 {!registerform  || loginform?
+ {!auth__route ?
 		<Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'100%',height:'100%'}}>
 		 <Box>            
 		   <img src={logo} className="img"/>

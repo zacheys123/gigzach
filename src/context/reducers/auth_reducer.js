@@ -1,15 +1,14 @@
 import { SHOWFORM, SHOWLOGIN, THEME } from "../actions"
 export const auth_state={
-    registerform:false,
-    loginform:false
+auth__route:false
 }
 
 export const auth=(action,state={auth_state})=>{
     switch(action.type){
         case SHOWFORM:
-            return {...state,registerform:true}
+            return {...state,auth__route:true}
             case SHOWLOGIN:
-                return {...state,loginform:true}
+                return {...state,auth__route:true}
         default:
             return state
     }
