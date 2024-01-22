@@ -88,9 +88,9 @@ h5{
         }
     }
     select{
-      padding:.9rem;
+      padding:.5rem;
       fojnt-family:sans-serif;
-      margin-bottom:.9rem;
+      margin-bottom:.4rem;
     }
       h5{
         color:white;
