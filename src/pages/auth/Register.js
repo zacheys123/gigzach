@@ -49,7 +49,7 @@ const Register = () => {
       <motion.div initial=
       {{x:'300px',opacity:0}} animate={{x:[0,-125,0],opacity:[1,0,0,0,1]}}>
 <h5 style={{color:'white',fontFamily:'monospace'}}>Personal info</h5>
-{f_page &&
+{first &&
 <>
 <input
       type="text"
@@ -91,7 +91,7 @@ const Register = () => {
 
 } 
   {/*load the second page*  */}
-{s_page &&
+{second &&
   <motion.div>
 <input
       type="text"
@@ -134,7 +134,7 @@ const Register = () => {
       </motion.div>
 }
 {/* load the third page */}
-{t_page &&
+{third &&
 <motion.div>
 
   <div style={{}}>
@@ -177,7 +177,7 @@ myArray.map((_month, idx) =>
 </motion.div>
 }
 {/* load the fourth page */}
-{q_page &&
+{fourth &&
 <motion.div>
   <div  style={{display:'flex',alignItems:'center'}}><input
       type={pass ? "text" :"password"} 
