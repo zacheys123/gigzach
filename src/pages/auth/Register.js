@@ -9,17 +9,14 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import {SHOWFORM} from '../../context/actions'
 import { SettingsBackupRestoreSharp } from "@mui/icons-material";
 import {useAuthContext} from '../../context/_contexts/AuthContext'
+import {setFirst,setSecond,setThird,setSec,setThirdButton} from '../../components/utils'
 const Register = () => {
 
   const{
-    authstate:{registerform},
+    authstate:{first,second,third,fourth},
     setAuth
   }=useAuthContext()
 
-  const[f_page,setF]=useState(true)
-  const[s_page,setS]=useState(false)
-  const[t_page,setT]=useState(false)
-  const[q_page,setQ]=useState(false)
   const[pass,setPass]=useState(false)
   const[cpass,setCPass]=useState(false)
   const handleSubmit = (ev) => {
@@ -87,10 +84,7 @@ const Register = () => {
     />
 
 <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
-      setS(true);
-      setT(false);
-      setQ(false)}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={setFirst}>Next</Button>
       </div>
     </>
 
@@ -135,10 +129,7 @@ const Register = () => {
   
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
-      setS(false);
-      setT(true);
-      setQ(false)}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={setSecond}>Next</Button>
       </div>
       </motion.div>
 }
@@ -180,10 +171,7 @@ myArray.map((_month, idx) =>
     />
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>{setF(false);
-      setS(false);
-      setT(false);
-      setQ(true)}}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}}  onClick={setThird}>Next</Button>
       </div>
 
 </motion.div>
