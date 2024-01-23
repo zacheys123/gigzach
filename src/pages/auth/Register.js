@@ -49,7 +49,17 @@ const[errormessage,setErrorMessage]=useState('')
     <form action="" onSubmit={handleSubmit}>
       <motion.div initial=
       {{x:'300px',opacity:0}} animate={{x:[0,-125,0],opacity:[1,0,0,0,1]}}>
-<h5 style={{color:'white',fontFamily:'monospace'}}>Personal info</h5>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}><h5 style={{color:'white',fontFamily:'monospace'}}>Personal info</h5>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+          <>
+          <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        </>
+        <span>back to top</span>
+        </div>
+        </div>
+
 {first &&
 <>
 <input
@@ -134,7 +144,7 @@ const[errormessage,setErrorMessage]=useState('')
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
       {error &&
       <p>{errormessage}</p>}
-      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={setSecond}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>setSecond(setAuth,setErrorMessage,setError,form_data)}>Next</Button>
       </div>
       </motion.div>
 }
@@ -178,7 +188,7 @@ myArray.map((_month, idx) =>
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
     {error &&
       <p>{errormessage}</p>}
-      <Button variant="contained" sx={{fontFamily:'monospace'}}  onClick={setThird}>Next</Button>
+      <Button variant="contained" sx={{fontFamily:'monospace'}}  onClick={()=>setThird(setAuth,setErrorMessage,setError,form_data)}>Next</Button>
       </div>
 
 </motion.div>
