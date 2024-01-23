@@ -38,7 +38,8 @@ const Register = () => {
     city:'',
     country:'',
   });
-
+const[error,setError]=useState(false)
+const[errormessage,setErrorMessage]=useState('')
   const handleInput=(ev)=>{
     setData({...form_data,[ev.target.name]:ev.target.value})
   }
@@ -84,7 +85,9 @@ const Register = () => {
     />
 
 <div style={{textAlign:'right',margin:'.8rem auto'}}>
-      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={setFirst}>Next</Button>
+{error &&
+      <p>{errormessage}</p>}
+      <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={()=>setFirst(setAuth,setErrorMessage,setError,form_data,)}>Next</Button>
       </div>
     </>
 
@@ -129,6 +132,8 @@ const Register = () => {
   
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
+      {error &&
+      <p>{errormessage}</p>}
       <Button variant="contained" sx={{fontFamily:'monospace'}} onClick={setSecond}>Next</Button>
       </div>
       </motion.div>
@@ -171,6 +176,8 @@ myArray.map((_month, idx) =>
     />
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
+    {error &&
+      <p>{errormessage}</p>}
       <Button variant="contained" sx={{fontFamily:'monospace'}}  onClick={setThird}>Next</Button>
       </div>
 
@@ -204,13 +211,13 @@ myArray.map((_month, idx) =>
   </div>
 
     <div style={{textAlign:'right',margin:'.8rem auto'}}>
+    {error &&
+      <p>{errormessage}</p>}
       <Button variant="contained" sx={{fontFamily:'monospace'}}>Next</Button>
       </div>
 
 </motion.div>
 }
-
-
 
       </motion.div>
 
